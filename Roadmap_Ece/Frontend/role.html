@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Role Details</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1 id="roleTitle">Loading...</h1>
+    <p id="roleDesc"></p>
+    <a class="backBtn" href="index.html">⬅ Back to Roles</a>
+  </header>
+
+  <section class="tabs">
+    <button class="tabBtn active" data-level="basic">Basic (0–1)</button>
+    <button class="tabBtn" data-level="intermediate">Intermediate (2–4)</button>
+    <button class="tabBtn" data-level="expert">Expert (5–12)</button>
+  </section>
+
+  <main class="details" id="roleDetails"></main>
+
+  <script>
+    const API_BASE = "http://127.0.0.1:5000/api";
+
+    const params = new URLSearchParams(window.location.search);
+    const roleId = params.get("id");
+
+    const roleTitle = document.getElementById("roleTitle");
+    const roleDesc = document.getElementById("roleDesc");
+    const roleDetails = document.getElementById("roleDetails");
+    const tabBtns = document.querySelectorAll(".tabBtn");
+
+    let roleData = null;
+
+    function renderLevel(levelKey) {
+      const level = roleData.levels[levelKey];
+
+      roleDetails.innerHTML = `
+        <div class="card">
+          <h2>📌 ${level.experience}</h2>
+
+          <h3>✅ Fundamentals</h3>
+          <ul>${level.fundamentals.map(x => `<li>${x}</li>`).join("")}</ul>
+
+          <h3>🧠 Skills to Learn</h3>
+          <ul>${level.skills.map(x => `<li>${x}</li>`).join("")}</ul>
+
+          <h3>🛠 Tools</h3>
+          <ul>${level.tools.map(x => `<li>${x}</li>`).join("")}</ul>
+
+          <h3>💡 Projects</h3>
+          <ul>${level.projects.map(x => `<li>${x}</li>`).join("")}</ul>
+        </div>
+      `;
+    }
+
+    async function loadRole() {
+      const res = await fetch(`${API_BASE}/roles/${roleId}`);
+      roleData = await res.json();
+
+      roleTitle.innerText = roleData.title;
+      roleDesc.innerText = roleData.description;
+
+      renderLevel("basic");
+    }
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderLevel(btn.dataset.level);
+      });
+    });
+
+    loadRole();
+  </script>
+</body>
+</html>

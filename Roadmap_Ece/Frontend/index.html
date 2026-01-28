@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECE Roadmap Website</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>📌 ECE Roadmap & Opportunities</h1>
+    <p>Choose your role → Learn step-by-step → Build your career 🚀</p>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search role (ex: RTL, Embedded, DFT)..."/>
+    
+    <select id="domainFilter">
+      <option value="all">All Domains</option>
+      <option value="VLSI">VLSI</option>
+      <option value="Embedded">Embedded</option>
+      <option value="Communication">Communication</option>
+    </select>
+    <!-- <select id="domainFilter">
+        <option value="all">All Domains</option>
+        <option value="VLSI">VLSI</option>
+        <option value="Embedded">Embedded</option>
+        <option value="Communication">Communication</option>
+        <option value="AI">AI</option>
+        <option value="Core ECE">Core ECE</option>
+    </select> -->
+
+
+    <button id="searchBtn">Search</button>
+  </section>
+
+  <main>
+    <div id="rolesContainer" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Made with ❤️ using JavaScript + Python Flask</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+[
+  {
+    "id": "rtl-design",
+    "title": "RTL Design Engineer",
+    "domain": "VLSI",
+    "description": "Design digital circuits using Verilog/SystemVerilog and implement micro-architecture for chips/SoCs.",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["Digital Electronics", "FSM", "Timing basics", "Boolean logic"],
+        "skills": ["Verilog basics", "SystemVerilog basics", "Synthesizable RTL"],
+        "tools": ["ModelSim/QuestaSim", "Vivado/Quartus"],
+        "projects": ["4-bit ALU", "UART RTL", "FIFO design"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["Pipelining", "AXI/APB protocols", "CDC basics"],
+        "skills": ["SoC RTL integration", "Clock gating", "Debugging"],
+        "tools": ["Synopsys DC", "SpyGlass"],
+        "projects": ["AXI4-lite slave", "RISC-V simple core"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["Micro-architecture", "Power intent UPF", "Multi-clock SoC"],
+        "skills": ["Area/Power optimization", "Performance tuning", "Silicon debug"],
+        "tools": ["PrimeTime", "Innovus/ICC2"],
+        "projects": ["Full SoC block RTL ownership"]
+      }
+    }
+  },
+  {
+    "id": "physical-design",
+    "title": "Physical Design Engineer",
+    "domain": "VLSI",
+    "description": "Convert synthesized netlist into final chip layout (floorplan, placement, CTS, routing).",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["CMOS basics", "Standard cells", "Floorplan concepts"],
+        "skills": ["Placement basics", "Routing basics"],
+        "tools": ["Innovus/ICC2", "Linux basics"],
+        "projects": ["Small block floorplan demo"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["CTS", "DRC/LVS concepts", "Congestion"],
+        "skills": ["Timing fixes", "ECO flow", "DRC fixing"],
+        "tools": ["Calibre", "PrimeTime"],
+        "projects": ["Timing closure on medium block"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["IR Drop/EM", "Advanced nodes concepts"],
+        "skills": ["Signoff ownership", "PD optimization"],
+        "tools": ["RedHawk", "Voltus"],
+        "projects": ["Full-chip tapeout support"]
+      }
+    }
+  },
+  {
+    "id": "design-verification",
+    "title": "Design Verification Engineer (UVM)",
+    "domain": "VLSI",
+    "description": "Verify RTL design using SystemVerilog + UVM with coverage-driven verification.",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["Digital logic", "Simulation concepts"],
+        "skills": ["SystemVerilog basics", "Testbench basics", "Assertions basics"],
+        "tools": ["QuestaSim", "GTKWave"],
+        "projects": ["Verify FIFO using SV testbench"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["Coverage", "Constrained random testing"],
+        "skills": ["UVM environment", "Scoreboard", "Monitors/Drivers"],
+        "tools": ["UVM", "Regression scripting"],
+        "projects": ["Verify AXI protocol using UVM"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["Formal verification", "SoC verification"],
+        "skills": ["Coverage closure", "Signoff verification planning"],
+        "tools": ["JasperGold", "VCS"],
+        "projects": ["SoC-level UVM + Formal"]
+      }
+    }
+  },
+  {
+    "id": "dft",
+    "title": "DFT Engineer",
+    "domain": "VLSI",
+    "description": "Design for testability: scan chains, ATPG patterns, BIST to improve manufacturing test coverage.",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["Fault models", "Scan chain basics"],
+        "skills": ["ATPG basics", "DFT concepts"],
+        "tools": ["Tessent basics", "DFT Compiler basics"],
+        "projects": ["Scan insertion mini project"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["Coverage improvement", "JTAG boundary scan"],
+        "skills": ["ATPG pattern generation", "Debug failing patterns"],
+        "tools": ["Tessent", "PrimeTime"],
+        "projects": ["ATPG patterns for block"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["LBIST/MBIST", "Yield learning"],
+        "skills": ["Post-silicon test debug", "Production signoff"],
+        "tools": ["Advanced Tessent flows"],
+        "projects": ["Full-chip DFT signoff"]
+      }
+    }
+  },
+  {
+    "id": "embedded",
+    "title": "Embedded Systems Engineer",
+    "domain": "Embedded",
+    "description": "Build software for microcontrollers, sensors, and hardware devices using C/C++ and protocols.",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["C programming", "Microcontroller basics", "UART/SPI/I2C"],
+        "skills": ["GPIO control", "Interrupt basics"],
+        "tools": ["Arduino IDE", "Keil/STM32CubeIDE"],
+        "projects": ["Sensor reading + LCD", "UART communication"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["RTOS basics", "Memory management"],
+        "skills": ["Driver development", "Debugging with JTAG"],
+        "tools": ["FreeRTOS", "OpenOCD"],
+        "projects": ["RTOS based sensor system"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["Embedded architecture", "Low power design"],
+        "skills": ["System design", "Performance optimization"],
+        "tools": ["Embedded Linux", "Yocto"],
+        "projects": ["Product-level embedded ownership"]
+      }
+    }
+  },
+  {
+    "id": "communication",
+    "title": "Communication Engineer",
+    "domain": "Communication",
+    "description": "Work on wireless systems, modulation, channel coding, and telecom technologies like LTE/5G.",
+    "levels": {
+      "basic": {
+        "experience": "0-1 years",
+        "fundamentals": ["Signals & Systems", "SNR", "Modulation basics"],
+        "skills": ["MATLAB simulation", "Basic channel models"],
+        "tools": ["MATLAB", "Simulink"],
+        "projects": ["BPSK simulation", "QAM simulation"]
+      },
+      "intermediate": {
+        "experience": "2-4 years",
+        "fundamentals": ["OFDM", "Coding basics"],
+        "skills": ["LTE/5G basics", "SDR basics"],
+        "tools": ["GNU Radio", "USRP basics"],
+        "projects": ["OFDM transmitter/receiver"]
+      },
+      "expert": {
+        "experience": "5-12 years",
+        "fundamentals": ["MIMO", "5G NR system design"],
+        "skills": ["Optimization", "RF impairment handling"],
+        "tools": ["System-level simulators"],
+        "projects": ["5G link-level optimization"]
+      }
+    }
+  }
+]
